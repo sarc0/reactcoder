@@ -1,0 +1,42 @@
+export const data = [
+  {
+    id: 1,
+    title: "Atardecer en Konoha",
+    price: 1500,
+    stock: 1,
+    thumbnail: "",
+    description: "Cuadro de Konoha - Naruto",
+  },
+  {
+    id: 2,
+    title: "Kira & L",
+    price: 1000,
+    stock: 1,
+    thumbnail: "",
+    description: "Cuadro de Kira y L - Death Note",
+  },
+  {
+    id: 3,
+    title: "Hermandad",
+    price: 1800,
+    stock: 1,
+    thumbnail: "",
+    description: "Los hermanos Elric - Full Metal Alchemist Brotherhood",
+  },
+  {
+    id: 4,
+    title: "Traición",
+    price: 2200,
+    stock: 1,
+    thumbnail: "",
+    description: "Guts y Griffith - Berserk",
+  },
+  {
+    id: 5,
+    title: "Lluvia en Tokyo",
+    price: 1300,
+    stock: 1,
+    thumbnail: "",
+    description: "Mikey y su CB250T - Tokyo Revengers",
+  },
+];
