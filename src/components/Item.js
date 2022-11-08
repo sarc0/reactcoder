@@ -1,4 +1,6 @@
-const Producto = (props) => {
+import { Link } from "react-router-dom";
+
+const Item = (props) => {
   return (
     <div className="producto-container">
       <div className="producto-info">
@@ -8,8 +10,16 @@ const Producto = (props) => {
         </div>
         <p>Price: {props.price}</p>
         <p>{props.description}</p>
+        <p>
+          <Link
+            to={'/item/${id}'}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            Detalle
+          </Link>
+        </p>
       </div>
     </div>
   );
 };
-export default Producto;
+export default Item;
