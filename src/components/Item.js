@@ -12,7 +12,7 @@ const Item = (props) => {
         <p>{props.description}</p>
         <p>
           <Link
-            to={'/item/${id}'}
+            to={`/item/${props.id}`}
             style={{ textDecoration: "none", color: "black" }}
           >
             Detalle
