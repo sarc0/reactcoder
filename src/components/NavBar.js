@@ -24,7 +24,12 @@ const NavBar = () => {
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/category/1" className="nav-link" aria-current="page" href="#">
+              <Link
+                to="/category/1"
+                className="nav-link"
+                aria-current="page"
+                href="#"
+              >
                 Cuadros
               </Link>
             </li>
@@ -42,7 +47,9 @@ const NavBar = () => {
         </div>
       </div>
       <div>
-        <CartWidget />
+        <Link to="/cart" className="nav-link" href="#">
+          <CartWidget />
+        </Link>
       </div>
     </nav>
   );

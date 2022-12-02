@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ detalle }) => {
-    const onAdd = (cantidad)=>{
-        console.log(`Agregaste ${cantidad} items al carrito`)
-    }
+  const { addToCart } = useContext(CartContext);
+  const onAdd = (cantidad) => {
+    alert(`Agregaste ${cantidad} items al carrito`);
+    addToCart(detalle);
+  };
   return (
     <div
       style={{
@@ -18,7 +22,11 @@ const ItemDetail = ({ detalle }) => {
       <img src={detalle.thumbnail} alt={detalle.title} />
       <p>{detalle.description}</p>
       <p>${detalle.price}</p>
-      <ItemCount initial={1} stock={detalle.stock} onAdd={onAdd}/>
+      <p>{detalle.stock} unidades en stock</p>
+      <ItemCount initial={1} stock={detalle.stock} onAdd={onAdd} />
+      <Link to="/cart" className="nav-link" href="#">
+        <button>Checkout</button>
+      </Link>
     </div>
   );
 };
